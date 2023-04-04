@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 body {
   font-family: "Oswald", sans-serif;
   background: #1d3b78;
@@ -5,36 +8,164 @@ body {
   padding: 0;
   text-align: center;
 }
-
 .welcome-screen {
   background: #587fb5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-items: center;
-  min-height: 100vh;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-  position: relative;
-  word-wrap: break-word;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.center {
-  width: 50%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 4rem 20%;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
 }
 
 h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  padding: 0px 0px -10px 0px;
+  font-style: bold;
+}
+
+.paragraph-welcome {
+  padding: 0px 0px 0px 0px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #2c2c2c;
+  line-height: 1;
+}
+
+.description-welcome {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.content-background {
+  background-color: #e6eef6;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20%;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+}
+h2 {
   font-size: 40px;
   font-weight: 700;
+}
+.startButton {
+  background-color: #a4bfdd;
+  color: #fff;
+  border: none;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.startButton:hover {
+  background-color: #7faadb;
+  cursor: pointer;
+}
+.about-us {
+  margin-bottom: 80px;
+}
+.about-us-content {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 0% 10%;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  border: none;
+  font-size: 17px;
+  width: 70%;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+}
+.fish-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fish-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2% 10%;
+  background-color: #587fb5;
+  border: #a4bfdd;
+  border-radius: 20px;
+}
+
+.fish-item {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.fish-item img {
+  width: 100%;
+}
+
+.fish-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .content-background {
+    width: 60%;
+    padding: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content-background {
+    width: 80%;
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .content-background {
+    width: 90%;
+    padding: 5%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .content-background {
+    width: 95%;
+    padding: 5%;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 896px) {
+  .content-background {
+    width: 70%;
+    padding: 15%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .content-background {
+    width: 90%;
+    padding: 10px;
+  }
 }
