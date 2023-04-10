@@ -26,3 +26,32 @@ function search() {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const fishItems = document.querySelectorAll(".fish-item");
+  const tooltip = document.createElement("div");
+  tooltip.classList.add("tooltip");
+  document.body.appendChild(tooltip);
+  fishItems.forEach((fishItem) => {
+    fishItem.addEventListener("mouseenter", (event) => {
+      const description = fishItem.dataset.description;
+      const imgSrc = fishItem.querySelector("img").getAttribute("src");
+      const tooltipContent = `
+      <div class="tooltip-image-container">
+        <img src="${imgSrc}" alt="Fish Image">
+      </div>
+      <div class="tooltip-description">${description}</div>
+    `;
+      tooltip.innerHTML = tooltipContent;
+      tooltip.style.display = "block";
+    });
+
+    fishItem.addEventListener("mousemove", (event) => {
+      tooltip.style.left = `${event.pageX + 10}px`;
+      tooltip.style.top = `${event.pageY + 10}px`;
+    });
+
+    fishItem.addEventListener("mouseleave", (event) => {
+      tooltip.style.display = "none";
+    });
+  });
+});

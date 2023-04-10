@@ -5,25 +5,28 @@ body {
   font-family: "Oswald", sans-serif;
   background-image: radial-gradient(circle at center, #1d3b78, #aab6c4);
   margin: 0;
-  padding: 0;
+  padding: 80px 0 0 0;
   text-align: center;
 }
-.welcome-screen {
-  background-image: linear-gradient(to bottom, #587fb5, #395377);
-  background-position: bottom right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 4rem 20%;
-  position: relative;
-  word-wrap: break-word;
-  overflow-x: hidden;
-  border: 3px solid black;
-  margin: 0;
-  width: 100%;
+header {
   text-shadow: 2px 2px 6px rgb(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #587fb5, #395377);
+  height: 80px;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 hr {
@@ -94,14 +97,28 @@ h2 {
   background-color: #7faadb;
   cursor: pointer;
 }
-.about-us {
+.about {
   padding: 5%;
 }
-.about-us-content {
+.about-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about-description img {
+  margin-right: 5px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.about-content {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  padding: 0% 10%;
+  padding: 0;
 }
 .search-container {
   display: flex;
