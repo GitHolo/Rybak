@@ -7,6 +7,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 .welcome-screen {
   background-image: linear-gradient(to bottom, #587fb5, #395377);
@@ -16,14 +18,21 @@ body {
   align-items: center;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 4rem 20%;
-  position: relative;
   word-wrap: break-word;
   overflow-x: hidden;
   border: 3px solid black;
   margin: 0;
   width: 100%;
   text-shadow: 2px 2px 6px rgb(0, 0, 0, 0.4);
+}
+.content-background {
+  background-color: #e6eef6;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
 }
 
 hr {
@@ -57,16 +66,6 @@ h1 {
   margin-top: 10px;
   font-weight: 400;
 }
-
-.content-background {
-  background-color: #e6eef6;
-  width: 80%;
-  margin: 0 auto;
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
-  border: 3px solid black;
-  border-top: none;
-  border-bottom: none;
-}
 h2 {
   font-size: 40px;
   font-weight: 700;
@@ -88,7 +87,7 @@ h2 {
   margin-top: 10px;
 }
 .search-tool {
-  padding: 0 5% 5% 5%;
+  padding: 5%;
 }
 .startButton:hover {
   background-color: #7faadb;
@@ -284,94 +283,15 @@ a:hover {
 .scrolling-text:nth-child(8) {
   animation-delay: 17.5s;
 }
-@media screen and (min-width: 768px) {
-  .content-background {
-    width: 62%;
-  }
-  .about-us {
-    padding: 10%;
-  }
-  .search-tool {
-    padding: 10%;
-  }
+.tooltip-description {
+  background-color: #102142;
 }
-
-@media screen and (min-width: 1024px) {
-  .content-background {
-    width: 84%;
-  }
-  .about-us {
-    padding: 5%;
-  }
-  .search-tool {
-    padding: 5%;
-  }
+.tooltip-image-container {
+  max-width: 300px;
 }
-
-@media screen and (min-width: 414px) and (max-width: 896px) {
+@media screen and (max-width: 750px) {
   .content-background {
-    width: 68%;
-    margin: 0;
-  }
-  .about-us {
-    padding: 4%;
-  }
-  .search-tool {
-    padding: 4%;
-  }
-}
-
-@media screen and (min-width: 414px) and (max-width: 896px) {
-  .content-background {
-    width: 100%;
-    margin: 0;
-  }
-  .about-us,
-  .search-tool {
-    padding: 5%;
-    box-sizing: border-box;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .content-background {
-    width: 100%;
-    margin: 0;
-  }
-  .about-us,
-  .search-tool {
-    padding: 10%;
-    box-sizing: border-box;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .content-background {
-    width: 88.2%;
-  }
-  .about-us {
-    padding: 5%;
-  }
-  .search-tool {
-    padding: 5%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .content-background {
-    width: 90%;
-  }
-  .about-us {
-    padding: 10px;
-  }
-  .search-tool {
-    padding: 10px;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  .content-background {
-    width: 95%;
+    width: 99%;
   }
   .welcome-screen {
     width: 100%;
@@ -382,5 +302,20 @@ a:hover {
   }
   .search-tool {
     padding: 5%;
+  }
+  .fish-item {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .scrolling-text:nth-child(2),
+  .scrolling-text:nth-child(4),
+  .scrolling-text:nth-child(6),
+  .scrolling-text:nth-child(8) {
+    display: none;
+  }
+  .content-background {
+    width: 98%;
   }
 }

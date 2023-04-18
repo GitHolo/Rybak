@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fishItem.addEventListener("mousemove", (event) => {
-      tooltip.style.left = `${event.pageX + 10}px`;
-      tooltip.style.top = `${event.pageY + 10}px`;
+      tooltip.style.left = `${event.pageX + 20}px`;
+      tooltip.style.top = `${event.pageY - 600}px`;
     });
 
     fishItem.addEventListener("mouseleave", (event) => {
