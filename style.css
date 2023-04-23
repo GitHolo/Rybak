@@ -248,8 +248,17 @@ a:hover {
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 12px;
+  border: solid 2px black;
 }
-
+.tooltip-description {
+  background-color: #102142;
+}
+.tooltip-image-container {
+  max-width: 300px;
+}
+.tooltip-image-container img {
+  max-width: 300px;
+}
 @keyframes scrolling {
   0% {
     left: 100%;

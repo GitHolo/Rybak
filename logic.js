@@ -31,23 +31,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const tooltip = document.createElement("div");
   tooltip.classList.add("tooltip");
   document.body.appendChild(tooltip);
+  const viewportWidth = window.innerWidth;
   fishItems.forEach((fishItem) => {
     fishItem.addEventListener("mouseenter", (event) => {
       const description = fishItem.dataset.description;
       const imgSrc = fishItem.querySelector("img").getAttribute("src");
       const tooltipContent = `
-      <div class="tooltip-image-container">
-        <img src="${imgSrc}" alt="Fish Image">
-      </div>
-      <div class="tooltip-description">${description}</div>
-    `;
+        <div class="tooltip-image-container">
+          <img src="${imgSrc}" alt="Fish Image">
+        </div>
+        <div class="tooltip-description">${description}</div>
+      `;
       tooltip.innerHTML = tooltipContent;
       tooltip.style.display = "block";
+      const tooltipWidth = tooltip.offsetWidth;
+      if (event.clientX + tooltipWidth > viewportWidth) {
+        tooltip.style.left = `${event.clientX - tooltipWidth - 20}px`;
+      } else {
+        tooltip.style.left = `${event.clientX + 20}px`;
+      }
+      tooltip.style.top = `${event.clientY}px`;
     });
 
     fishItem.addEventListener("mousemove", (event) => {
-      tooltip.style.left = `${event.pageX + 20}px`;
-      tooltip.style.top = `${event.pageY - 600}px`;
+      const tooltipWidth = tooltip.offsetWidth;
+      if (event.clientX + tooltipWidth > viewportWidth) {
+        tooltip.style.left = `${event.clientX - tooltipWidth - 20}px`;
+      } else {
+        tooltip.style.left = `${event.clientX + 20}px`;
+      }
+      tooltip.style.top = `${event.clientY}px`;
     });
 
     fishItem.addEventListener("mouseleave", (event) => {
