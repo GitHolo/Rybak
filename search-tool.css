@@ -1,0 +1,93 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.search-container input[type="text"] {
+  padding: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  border: none;
+  font-size: 17px;
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+}
+.fish-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 850px;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fish-item {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.fish-item img {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #cedaf3;
+}
+.fish-item:hover img {
+  border: 2px solid black;
+}
+.fish-item:hover .fish-name {
+  color: black;
+}
+
+.fish-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cedaf3;
+}
+.fish-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.fish-list::-webkit-scrollbar {
+  width: 10px;
+  overflow: hidden;
+}
+
+.fish-list::-webkit-scrollbar-thumb {
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.fish-list::-webkit-scrollbar-track {
+  border-radius: 0 5px 5px 0;
+  background-color: #f5f5f5;
+}
+
+.fish-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fish-list::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fish-list::-webkit-scrollbar-corner {
+  background-color: #587fb5;
+}
+.fish-tool {
+  justify-content: center;
+  padding: 0;
+  background-image: linear-gradient(to left top, #102142, #587fb5);
+  border: 3px solid black;
+  border-radius: 20px 10px 10px 20px;
+  max-height: 700px;
+}
