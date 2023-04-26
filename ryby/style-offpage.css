@@ -191,26 +191,6 @@ a:hover {
   animation: scrolling 20s linear infinite;
   font-size: 20px;
 }
-.tooltip {
-  position: fixed;
-  z-index: 9999;
-  display: none;
-  background-color: #fff;
-  color: #333;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
-}
-.tooltip-description {
-  background-color: #102142;
-}
-.tooltip-image-container {
-  max-width: 300px;
-}
-.tooltip-image-container img {
-  max-width: 300px;
-}
 abbr {
   text-decoration: none;
 }

@@ -27,7 +27,7 @@ body {
 }
 .content-background {
   background-color: #e6eef6;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
   border: 3px solid black;
@@ -145,40 +145,6 @@ a:hover {
   animation: scrolling 20s linear infinite;
   font-size: 20px;
 }
-.tooltip {
-  position: fixed;
-  z-index: 9999;
-  display: block;
-  width: 580px;
-  background-color: #fff;
-  color: #333;
-  padding: 10px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
-  border: solid 2px black;
-}
-
-.tooltip-description {
-  font-size: 20px;
-  font-weight: bold;
-  padding: 5px;
-  display: inline-block;
-  width: 250px;
-  text-align: left;
-}
-
-.tooltip-image-container {
-  max-width: 300px;
-  float: left;
-}
-
-.tooltip-image-container img {
-  max-width: 300px;
-  border-radius: 20px;
-  border: 2px solid black;
-}
-
 @keyframes scrolling {
   0% {
     left: 100%;
