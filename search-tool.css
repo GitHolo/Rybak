@@ -89,7 +89,7 @@
   background-image: linear-gradient(to left top, #102142, #587fb5);
   border: 3px solid black;
   border-radius: 20px 10px 10px 20px;
-  max-height: 700px;
+  height: 700px;
 }
 .tooltip {
   position: fixed;

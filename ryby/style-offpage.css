@@ -98,7 +98,8 @@ h2 {
 .about {
   padding: 0;
   position: relative;
-  height: 1100px;
+  height: 960px;
+  padding-bottom: 20%;
 }
 .about-description {
   display: flex;
@@ -110,7 +111,7 @@ h2 {
 
 .about-fish-img {
   margin-top: 0;
-  margin: 5% 10%;
+  margin: 5%;
   max-width: 380px;
   justify-content: center;
   background-color: #587fb5;
@@ -126,6 +127,14 @@ h2 {
   border: 2px solid black;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
+.about-content img {
+  width: 90%;
+  max-width: 480px;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
 .about-content {
   font-size: 20px;
   font-weight: 400;
@@ -133,6 +142,7 @@ h2 {
   padding: 0;
   text-align: left;
   box-sizing: border-box;
+  width: 60%;
 }
 .about-content-title {
   font-size: 30px;
@@ -339,13 +349,17 @@ th {
 .scrolling-text:nth-child(8) {
   animation-delay: 17.5s;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1400px) {
   .content-background {
     width: 99%;
   }
   .welcome-screen {
     width: 100%;
     padding: 4rem 5%;
+  }
+  .about {
+    height: auto;
+    margin: 5%;
   }
   .about-us {
     padding: 5%;
@@ -361,7 +375,7 @@ th {
     align-items: center;
   }
   .about-fish-img {
-    margin-left: 0;
+    margin: 0;
     margin-bottom: 20px;
   }
   .about-content {
@@ -371,13 +385,19 @@ th {
     align-items: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .about-content {
-    border-left: 2px solid #000000;
+    border-left: 3px solid #000000;
     position: absolute;
-    left: calc(50% + 10px);
+    left: calc(10% + 400px);
     top: 0;
     bottom: 0;
+    width: auto;
+  }
+  .about-content-description {
+    border-bottom: 3px solid black;
+    padding: 2%;
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 450px) {
