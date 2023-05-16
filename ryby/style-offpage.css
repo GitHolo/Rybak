@@ -96,19 +96,21 @@ h2 {
   cursor: pointer;
 }
 .about {
-  padding: 5%;
+  padding: 0;
+  position: relative;
+  height: 1100px;
 }
 .about-description {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: left;
   margin-top: 0;
 }
 
 .about-fish-img {
   margin-top: 0;
-  margin-right: 20px;
+  margin: 5% 10%;
   max-width: 380px;
   justify-content: center;
   background-color: #587fb5;
@@ -128,9 +130,9 @@ h2 {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  max-width: 375px;
   padding: 0;
   text-align: left;
+  box-sizing: border-box;
 }
 .about-content-title {
   font-size: 30px;
@@ -209,7 +211,38 @@ abbr {
 .fish-record-text {
   text-align: right;
 }
-
+.fish-location {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  color: #000000;
+  margin: 0 auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.fish-location-title {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 2px;
+}
+ul {
+  padding-inline-start: 0px;
+  text-align: left;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  list-style: none;
+}
+ul li::before {
+  content: "🡆";
+  margin-right: 2px;
+  color: #3360bb;
+}
 .vertical-hr {
   border-left: 2px solid black;
   height: 100%;
@@ -269,6 +302,9 @@ th {
 .tabel-bottom-right {
   border-right: none;
   border-bottom: none;
+}
+.about-content-description {
+  margin-bottom: 2%;
 }
 @keyframes scrolling {
   0% {
@@ -335,7 +371,15 @@ th {
     align-items: center;
   }
 }
-
+@media (min-width: 768px) {
+  .about-content {
+    border-left: 2px solid #000000;
+    position: absolute;
+    left: calc(50% + 10px);
+    top: 0;
+    bottom: 0;
+  }
+}
 @media screen and (max-width: 450px) {
   .scrolling-text:nth-child(2),
   .scrolling-text:nth-child(4),
