@@ -178,13 +178,17 @@ a:hover {
 .scrolling-text:nth-child(8) {
   animation-delay: 17.5s;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1400px) {
   .content-background {
     width: 99%;
   }
   .welcome-screen {
     width: 100%;
     padding: 4rem 5%;
+  }
+  .about {
+    height: auto;
+    margin: 5%;
   }
   .about-us {
     padding: 5%;
@@ -195,8 +199,36 @@ a:hover {
   .fish-item {
     margin: 10px;
   }
+  .about-description {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-fish-img {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-title {
+    align-items: center;
+  }
 }
-
+@media (min-width: 1400px) {
+  .about-content {
+    border-left: 3px solid #000000;
+    position: absolute;
+    left: calc(10% + 400px);
+    top: 0;
+    bottom: 0;
+    width: auto;
+  }
+  .about-content-description {
+    border-bottom: 3px solid black;
+    padding: 2%;
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 450px) {
   .scrolling-text:nth-child(2),
   .scrolling-text:nth-child(4),
