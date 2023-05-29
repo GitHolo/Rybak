@@ -67,4 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
       tooltip.style.display = "none";
     });
   });
+  const sourceElement = document.querySelector(".about-content");
+  const targetElement = document.querySelector(".about");
+  const additionalPixelsElement = document.getElementById("additionalPixels");
+  const minWidth = 1400;
+
+  let additionalPixels = parseInt(additionalPixelsElement.dataset.value);
+
+  function setTargetElementHeight() {
+    const sourceElementHeight = sourceElement.offsetHeight;
+    const targetElementHeight = sourceElementHeight + additionalPixels;
+    targetElement.style.height = `${targetElementHeight}px`;
+  }
+
+  if (window.innerWidth >= minWidth) {
+    setTargetElementHeight();
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= minWidth) {
+        setTargetElementHeight();
+      } else {
+        targetElement.style.height = "";
+      }
+    });
+  }
 });

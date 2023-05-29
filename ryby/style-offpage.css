@@ -355,7 +355,7 @@ th {
 }
 @media screen and (max-width: 1400px) {
   .content-background {
-    width: 99%;
+    width: 100%;
   }
   .welcome-screen {
     width: 100%;
