@@ -70,24 +70,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const sourceElement = document.querySelector(".about-content");
   const targetElement = document.querySelector(".about");
   const additionalPixelsElement = document.getElementById("additionalPixels");
-  const minWidth = 1400;
+  const additionalPixels = parseInt(additionalPixelsElement.dataset.value);
+  const minWidth = 1402; // Minimum window width for the additional pixels to be applied
 
-  let additionalPixels = parseInt(additionalPixelsElement.dataset.value);
+  let initialSourceHeight = 0;
+
+  function setInitialSourceHeight() {
+    initialSourceHeight = sourceElement.offsetHeight;
+  }
 
   function setTargetElementHeight() {
-    const sourceElementHeight = sourceElement.offsetHeight;
-    const targetElementHeight = sourceElementHeight + additionalPixels;
-    targetElement.style.height = `${targetElementHeight}px`;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    if (windowWidth >= minWidth) {
+      const targetElementHeight = initialSourceHeight + additionalPixels;
+      targetElement.style.height = `${targetElementHeight}px`;
+    } else {
+      targetElement.style.height = ""; // Reset the height to default
+    }
   }
 
-  if (window.innerWidth >= minWidth) {
-    setTargetElementHeight();
-    window.addEventListener("resize", function () {
-      if (window.innerWidth >= minWidth) {
-        setTargetElementHeight();
-      } else {
-        targetElement.style.height = "";
-      }
-    });
-  }
+  // Set the initial source element height
+  setInitialSourceHeight();
+
+  // Call the function initially to set the target element's height
+  setTargetElementHeight();
+
+  // Attach an event listener to the window resize event
+  window.addEventListener("resize", setTargetElementHeight);
 });

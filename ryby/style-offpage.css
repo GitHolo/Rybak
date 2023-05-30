@@ -110,9 +110,11 @@ h2 {
 }
 
 .about-fish-img {
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
   margin: 5%;
-  max-width: 380px;
+  width: 380px;
   justify-content: center;
   background-color: #587fb5;
   border-radius: 20px;
@@ -122,8 +124,8 @@ h2 {
 }
 .about-fish-img img {
   width: 100%;
-  min-width: 150px;
   border-radius: 20px;
+  height: auto;
   border: 2px solid black;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
@@ -229,7 +231,7 @@ abbr {
   padding: 15px;
   justify-content: space-between;
   align-items: flex-start;
-  width: 350px;
+  max-width: 350px;
   color: #000000;
   margin: 0 auto;
   overflow-y: hidden;
@@ -282,7 +284,7 @@ ul li::before {
   border-radius: 20px;
   border: 2px solid black;
   overflow: hidden;
-  width: 350px;
+  max-width: 350px;
   margin: 15px auto;
 }
 
@@ -413,5 +415,13 @@ th {
   }
   .content-background {
     width: 98%;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .about-content {
+    left: calc(10% + 640px);
+  }
+  .about-fish-img {
+    min-width: 500px;
   }
 }
