@@ -3,7 +3,7 @@
 }
 body {
   font-family: "Oswald", sans-serif;
-  background-image: radial-gradient(circle at center, #1d3b78, #aab6c4);
+  background-image: linear-gradient(to bottom, #1d3b78, #aab6c4);
   margin: 0;
   padding: 80px 0 0 0;
   text-align: center;
