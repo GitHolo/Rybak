@@ -32,10 +32,11 @@
 }
 
 .fish-item img {
+  box-sizing: border-box;
   width: 100%;
   border-radius: 20px;
   border: 2px solid #cedaf3;
-  height: 105px;
+  background-color: white;
 }
 .fish-item:hover img {
   border: 2px solid black;
@@ -106,7 +107,7 @@
   border: solid 2px black;
 }
 .tooltip-description {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   padding: 5px;
   display: inline-block;
