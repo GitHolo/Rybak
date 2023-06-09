@@ -138,13 +138,13 @@ h2 {
   margin-top: 10px;
 }
 .about-content {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 32px;
   padding: 0;
   text-align: left;
   box-sizing: border-box;
-  width: 60%;
+  width: 100%;
 }
 .about-content-title {
   font-size: 30px;
@@ -399,6 +399,7 @@ th {
     top: 0;
     bottom: 0;
     width: auto;
+    font-size: 20;
   }
   .about-content-description {
     border-bottom: 3px solid black;
