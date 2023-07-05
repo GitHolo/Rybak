@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetElement = document.querySelector(".about");
   const additionalPixelsElement = document.getElementById("additionalPixels");
   const additionalPixels = parseInt(additionalPixelsElement.dataset.value);
-  const minWidth = 1402; // Minimum window width for the additional pixels to be applied
+  const minWidth = 1402;
 
   let initialSourceHeight = 0;
 
@@ -87,16 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetElementHeight = initialSourceHeight + additionalPixels;
       targetElement.style.height = `${targetElementHeight}px`;
     } else {
-      targetElement.style.height = ""; // Reset the height to default
+      targetElement.style.height = ""; 
     }
   }
-
-  // Set the initial source element height
   setInitialSourceHeight();
-
-  // Call the function initially to set the target element's height
   setTargetElementHeight();
-
-  // Attach an event listener to the window resize event
   window.addEventListener("resize", setTargetElementHeight);
 });
