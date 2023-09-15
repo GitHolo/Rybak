@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Kalkulator</title>
+</head>
+<body style="background-color: pink;">
+        <h1>Kalkulator</h1>
+    
+        <form>
+            <label for="num1">num1: </label>
+            <input type="number" id="num1" name="num1" required>
+    
+            <label for="num2">num2: </label>
+            <input type="number" id="num2" name="num2" required>
+            <br>
+            <button type="button" onclick="calculate('add')">dodaj</button>
+            <button type="button" onclick="calculate('minus')">odejmij</button>
+            <button type="button" onclick="calculate('times')">pomnóż</button>
+            <button type="button" onclick="calculate('divide')">podziel</button>
+            <button type="button" onclick="calculate('exp2num1')">potęguj kwadratowo num1</button>
+            <button type="button" onclick="calculate('exp2num2')">potęguj kwadratowo num2</button>
+            <button type="button" onclick="calculate('exp3num1')">potęguj sześciennie num1</button>
+            <button type="button" onclick="calculate('exp3num2')">potęguj sześciennie num1</button>
+        </form>
+    
+        <p id="result"></p>
+    
+        <script>
+            function calculate(operation) {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                var result = 0;
+
+                if(!isNaN(num1)&&!isNaN(num2)){
+                    switch(operation){
+                        case 'add':
+                            result = num1+num2;
+                            break;
+                        case 'minus':
+                            result = num1-num2;
+                            break;
+                        case 'times':
+                            result = num1*num2;
+                            break;
+                        case 'divide':
+                            if(num2 !==0){
+                                result = num1 / num2;
+                            }else{
+                                document.getElementById("result").innerHTML="błąd";
+                                return;
+                            }
+                            break;
+                        case 'exp2num1':
+                            result= num1*num1;
+                            break;
+                        case 'exp2num2':
+                            result= num2*num2;
+                            break;
+                        case 'exp3num1':
+                            result= num1*num1*num1;
+                            break;
+                        case 'exp3num2':
+                            result= num2*num2*num2;
+                            break;
+                        
+                    }
+                    document.getElementById("result").innerHTML="wynik: "+result;
+                }else{
+                    document.getElementById("result").innerHTML="błąd";
+                }
+            }
+        </script>
+        <style>
+            *{
+    font-family: 'Permanent Marker', cursive;
+}
+        </style>
+</body>
+</html>
